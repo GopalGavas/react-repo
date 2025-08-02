@@ -4,7 +4,8 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-import Product from "./pages/Product";
+import UseState from "./pages/30-7-2025/UseState";
+import UseEffect from "./pages/30-7-2025/UseEffect";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/product" element={<Product />}></Route>
+        <Route path="/useState" element={<UseState />}></Route>
+        <Route path="/useEffect" element={<UseEffect />}></Route>
       </Routes>
     </>
   );
