@@ -7,8 +7,6 @@ function Navbar() {
       <button onClick={() => navigate("/")}>Home</button>
       <button onClick={() => navigate("/register")}>Register</button>
       <button onClick={() => navigate("/login")}>Login</button>
-      <button onClick={() => navigate("/useState")}>useState</button>
-      <button onClick={() => navigate("/useEffect")}>useEffect</button>
     </>
   );
 }
