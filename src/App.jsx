@@ -12,6 +12,8 @@ import Product from "./pages/01-08-2025/Product";
 import StyleComp from "./pages/02-08-2025/StyleComp";
 import AddFruit from "./pages/02-08-2025/AddFruit";
 import Greeting from "./pages/02-08-2025/Greeting";
+import RegisterForm from "./pages/03-08-2025/RegisterForm";
+import LoginForm from "./pages/03-08-2025/LoginForm";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
           element={<Greeting name="Gopal" isLoggedIn={true} />}
         ></Route>
         <Route path="/dynamic-styling" element={<DynamicStyling />}></Route>
+        <Route path="/register-form" element={<RegisterForm />}></Route>
+        <Route path="/login-form" element={<LoginForm />}></Route>
       </Routes>
     </>
   );
