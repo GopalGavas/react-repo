@@ -14,6 +14,7 @@ import AddFruit from "./pages/02-08-2025/AddFruit";
 import Greeting from "./pages/02-08-2025/Greeting";
 import RegisterForm from "./pages/03-08-2025/RegisterForm";
 import LoginForm from "./pages/03-08-2025/LoginForm";
+import NotFound from "./pages/06-08-2025/NotFound";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/dynamic-styling" element={<DynamicStyling />}></Route>
         <Route path="/register-form" element={<RegisterForm />}></Route>
         <Route path="/login-form" element={<LoginForm />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </>
   );
