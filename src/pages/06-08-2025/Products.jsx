@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Products = () => {
@@ -32,6 +33,7 @@ const Products = () => {
           flexWrap: "wrap",
           gap: "20px",
           padding: "0 20px",
+          cursor: "pointer",
         }}
       >
         {data.length === 0 ? (
@@ -50,30 +52,35 @@ const Products = () => {
                 backgroundColor: "#fff",
               }}
             >
-              <img
-                style={{
-                  width: "100%",
-                  height: "150px",
-                  objectFit: "contain",
-                  marginBottom: "10px",
-                }}
-                src={product.image}
-                alt={product.title}
-              ></img>
-              <p
-                style={{
-                  fontSize: "14px",
-                  fontWeight: "bold",
-                  marginBottom: "5px",
-                  height: "40px",
-                  overflow: "hidden",
-                }}
+              <Link
+                to={`/products-api/${product.id}`}
+                style={{ textDecoration: "none", color: "inherit" }}
               >
-                {product.title}
-              </p>
-              <p style={{ fontSize: "16px", color: "#333" }}>
-                ${product.price}
-              </p>
+                <img
+                  style={{
+                    width: "100%",
+                    height: "150px",
+                    objectFit: "contain",
+                    marginBottom: "10px",
+                  }}
+                  src={product.image}
+                  alt={product.title}
+                ></img>
+                <p
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "bold",
+                    marginBottom: "5px",
+                    height: "40px",
+                    overflow: "hidden",
+                  }}
+                >
+                  {product.title}
+                </p>
+                <p style={{ fontSize: "16px", color: "#333" }}>
+                  ${product.price}
+                </p>
+              </Link>
             </div>
           ))
         )}
