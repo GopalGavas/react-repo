@@ -20,6 +20,18 @@ const SingleProduct = () => {
     fetchProduct();
   }, [id]);
 
+  const handleToCart = () => {
+    const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (existingCart.find((item) => item.id === product.id)) {
+      alert("Item already exists in the cart");
+    } else {
+      const updatedCart = [...existingCart, product];
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      alert("Product added to cart successfully");
+    }
+  };
+
   if (!product) {
     return <p style={{ textAlign: "center" }}>Loading product...</p>;
   }
@@ -47,7 +59,7 @@ const SingleProduct = () => {
               marginTop: "30px",
               fontWeight: "bold",
             }}
-            onClick={() => alert("product added to cart successfully")}
+            onClick={handleToCart}
           >
             Add to cart
           </button>

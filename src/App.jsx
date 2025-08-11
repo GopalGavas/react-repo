@@ -17,6 +17,7 @@ import LoginForm from "./pages/03-08-2025/LoginForm";
 import NotFound from "./pages/06-08-2025/NotFound";
 import Products from "./pages/06-08-2025/Products";
 import SingleProduct from "./pages/08-08-2025/SingleProduct";
+import Cart from "./pages/08-08-2025/Cart";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route path="/login-form" element={<LoginForm />}></Route>
         <Route path="/products-api" element={<Products />}></Route>
         <Route path="/products-api/:id" element={<SingleProduct />}></Route>
+        <Route path="/cart" element={<Cart />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </>
