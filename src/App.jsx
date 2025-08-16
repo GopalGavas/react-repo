@@ -18,6 +18,11 @@ import NotFound from "./pages/06-08-2025/NotFound";
 import Products from "./pages/06-08-2025/Products";
 import SingleProduct from "./pages/08-08-2025/SingleProduct";
 import Cart from "./pages/08-08-2025/Cart";
+import UseMemo from "./pages/10-08-2025/useMemo";
+import Parent from "./pages/10-08-2025/Parent";
+import UseCallback from "./pages/13-08-2025/UseCallback";
+import UseRef from "./pages/13-08-2025/UseRef";
+import CounterUseReducer from "./pages/13-08-2025/CounterUseReducer";
 
 function App() {
   return (
@@ -44,6 +49,11 @@ function App() {
         <Route path="/products-api/:id" element={<SingleProduct />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="*" element={<NotFound />}></Route>
+        <Route path="/use-memo" element={<UseMemo />} />
+        <Route path="/memo-method" element={<Parent />} />
+        <Route path="/use-callback" element={<UseCallback />} />
+        <Route path="/use-ref" element={<UseRef />} />
+        <Route path="/use-reducer" element={<CounterUseReducer />} />
       </Routes>
     </>
   );
