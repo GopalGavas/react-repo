@@ -23,6 +23,7 @@ import Parent from "./pages/10-08-2025/Parent";
 import UseCallback from "./pages/13-08-2025/UseCallback";
 import UseRef from "./pages/13-08-2025/UseRef";
 import CounterUseReducer from "./pages/13-08-2025/CounterUseReducer";
+import ToggleMode from "./pages/22-08-2025/ToggleMode";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
         <Route path="/use-callback" element={<UseCallback />} />
         <Route path="/use-ref" element={<UseRef />} />
         <Route path="/use-reducer" element={<CounterUseReducer />} />
+        <Route path="/toggle-theme" element={<ToggleMode />} />
       </Routes>
     </>
   );
