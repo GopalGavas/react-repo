@@ -26,6 +26,7 @@ import CounterUseReducer from "./pages/13-08-2025/CounterUseReducer";
 import ToggleMode from "./pages/22-08-2025/ToggleMode";
 import Calculator from "./pages/30-08-2025/Calculator";
 import { CalculatorProvider } from "./pages/30-08-2025/CalculatorContext";
+import CalculatorRedux from "./pages/30-08-2025/CalculatorRedux";
 
 function App() {
   return (
@@ -59,13 +60,14 @@ function App() {
         <Route path="/use-reducer" element={<CounterUseReducer />} />
         <Route path="/toggle-theme" element={<ToggleMode />} />
         <Route
-          path="/calculator"
+          path="/calculator-context"
           element={
             <CalculatorProvider>
               <Calculator />
             </CalculatorProvider>
           }
         />
+        <Route path="/calculator-redux" element={<CalculatorRedux />} />
       </Routes>
     </>
   );

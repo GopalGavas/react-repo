@@ -15,6 +15,7 @@ const Calculator = () => {
 
   return (
     <div className="calculator">
+      <h3>Calculator with Context</h3>
       <div className="display">
         <div className="previous">
           {state.previousInput} {state.operator}
