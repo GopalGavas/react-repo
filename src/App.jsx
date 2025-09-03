@@ -27,6 +27,7 @@ import ToggleMode from "./pages/22-08-2025/ToggleMode";
 import Calculator from "./pages/30-08-2025/Calculator";
 import { CalculatorProvider } from "./pages/30-08-2025/CalculatorContext";
 import CalculatorRedux from "./pages/30-08-2025/CalculatorRedux";
+import ReduxShoppingCart from "./pages/23-08-2025/ReduxShoppingCart";
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
         <Route path="/use-ref" element={<UseRef />} />
         <Route path="/use-reducer" element={<CounterUseReducer />} />
         <Route path="/toggle-theme" element={<ToggleMode />} />
+        <Route path="/cart-redux" element={<ReduxShoppingCart />} />
         <Route
           path="/calculator-context"
           element={
