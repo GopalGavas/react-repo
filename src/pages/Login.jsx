@@ -15,7 +15,8 @@ export default function Login() {
     try {
       const res = await axios.post(
         "http://localhost:3000/api/users/login",
-        formData
+        formData,
+        { withCredentials: true }
       );
       setMessage(res.data.message);
       setUserName(res.data?.name || "");
