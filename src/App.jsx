@@ -28,6 +28,9 @@ import Calculator from "./pages/30-08-2025/Calculator";
 import { CalculatorProvider } from "./pages/30-08-2025/CalculatorContext";
 import CalculatorRedux from "./pages/30-08-2025/CalculatorRedux";
 import ReduxShoppingCart from "./pages/23-08-2025/ReduxShoppingCart";
+import AllBlogs from "./pages/AllBlogs";
+import CreateBlog from "./pages/CreateBlog";
+import BlogDetails from "./pages/BlogDetails";
 
 function App() {
   return (
@@ -70,6 +73,13 @@ function App() {
           }
         />
         <Route path="/calculator-redux" element={<CalculatorRedux />} />
+        <Route path="/blogs" element={<AllBlogs />} />
+
+        {/* Create Blog */}
+        <Route path="/blogs/create" element={<CreateBlog />} />
+
+        {/* Blog Details Page */}
+        <Route path="/blogs/:id" element={<BlogDetails />} />
       </Routes>
     </>
   );
